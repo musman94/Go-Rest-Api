@@ -44,5 +44,7 @@ go get go.mongodb.org/mongo-driver gopkg.in/mgo.v2
 
 ## Clone the repo and run
 
+ ```sh
 $ git clone https://github.com/musman94/Otsimo-Task.git
 $ go run server.go
+```
