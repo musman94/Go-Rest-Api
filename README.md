@@ -35,3 +35,14 @@ helper dir contains a file having some helper functions that are used to connect
 model dir contains the model definitions for both the Candidate and Assignee.   
 dump dir contains the database `otsimo_db` that I used while working on the project.   
 examples dir contains the api documentation.   
+
+## Get the external modules
+
+ ```sh
+go get go.mongodb.org/mongo-driver gopkg.in/mgo.v2
+```
+
+## Clone the repo and run
+
+$ git clone https://github.com/musman94/Otsimo-Task.git
+$ go run server.go
