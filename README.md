@@ -1,4 +1,4 @@
-# Otsimo-Backend-Developer-Task
+# Otsimo-Task
 ## Running the server
 To run the server type `go run server.go` in the terminal. The server will start running on http://127.0.0.1:3000. 
 
