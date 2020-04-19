@@ -10,31 +10,31 @@ You can read more about each of the endpoints by clicking on their names.
 [createCandidate](examples/candidate/createCandidate.md)                 |/candidate/createCandidate               |POST   |
 [readCandidate](examples/candidate/readCandidate.md)                     |/candidate/readCandidate/{_id}           |GET    |
 [deleteCandidate](examples/candidate/deleteCandidate.md)                 |/candidate/deleteCandidate/{_id}         |DELETE |
-[arrangeMeeting](examples/candidate/arrangeMeeting.md)                   |/candidate/arrangeMeeting/{_id}          |PUT    |
-[completeMeeting](examples/candidate/completeMeeting.md)                 |/candidate/completeMeeting/{_id}         |PUT    |
-[denyCandidate](examples/candidate/denyCandidate.md)                     |/candidate/denyCandidate/{_id}           |PUT    |
-[acceptCandidate](examples/candidate/acceptCandidate.md)                 |/candidate/acceptCandidate/{_id}         |PUT    |
-[findAssigneeIDByName](examples/assignee/findAssigneeIDByName.md)        |/assignee/findAssigneeIDByName/{name}    |GET    |
-[findAssigneesCandidates](examples/candidate/findAssigneesCandidates.md) |/assignee/findAssigneesCandidates/{_id}  |GET    |
+[arrangeMeeting](examples/candidate/arrangeMeeting.md)                   |/candidate/arrangeMeeting/{_id}          |PATCH  |
+[completeMeeting](examples/candidate/completeMeeting.md)                 |/candidate/completeMeeting/{_id}         |PATCH  |
+[denyCandidate](examples/candidate/denyCandidate.md)                     |/candidate/denyCandidate/{_id}           |PATCH  |
+[acceptCandidate](examples/candidate/acceptCandidate.md)                 |/candidate/acceptCandidate/{_id}         |PATCH  |
+[findAssigneeIDByName](examples/assignee/findAssigneeIDByName.md)        |/assignee/findAssigneeIDByName/{name}    |PATCH  |
+[findAssigneesCandidates](examples/candidate/findAssigneesCandidates.md) |/assignee/findAssigneesCandidates/{_id}  |PATCH  |
 
 ## Testing
 For testing you can use a tool like POSTMAN and call each of the endpoints with the required parameters.  
 
 ## Structure
-Layers:        
+### Layers:  
+
 Controller   
 Service   
-Dao   
+Repository   
 
-The Controller layer is mainly responsible for getting the results and returning them in JSON format. The Service layer checks the inputs/parameters, makes changes to the objects and forwards them to the Dao layer. The Dao layer acts as a gateway to the database.   
+The Controller layer is mainly responsible for getting the results and returning them in JSON format. The Service layer checks the inputs/parameters, makes changes to the objects and forwards them to the Repository layer. The Repository layer acts as a gateway to the database.   
 
-`server.go`is the entry point of the server. It calls either `CandidateController.go` or `AssigneeController.go` depending on the route. They in turn call either `CandidateService.go` or `AssigneeService.go`. which forward the request to either `CandidateDAO.go` or `AssigneeDAO.go`.   
+`server.go`is the entry point of the server. It calls either `CandidateController.go` or `AssigneeController.go` depending on the route. They in turn call either `CandidateService.go` or `AssigneeService.go`. which forward the request to either `CandidateRepo.go` or `AssigneeRepo.go`.   
 
 Layer specific files can be found in the folder with the layer's name e.g Controller files are in a folder named controller.   
 helper dir contains a file having some helper functions that are used to connect to the DB, get JSON responses etc.   
 model dir contains the model definitions for both the Candidate and Assignee.   
-dump dir contains the database `otsimo_db` that I used while working on the project.   
-examples dir contains the api documentation.   
+examples dir contains the api documentation.  
 
 ## Get the external modules
 
