@@ -120,3 +120,18 @@ Provide all the required information of the Candidate model.
 }
 
 ```
+
+### Or
+
+**Condition** : If there was a problem on the database side
+
+**Code** : `500 BAD REQUEST`
+
+**Content example**
+
+```json
+{
+    "error": "There was an internal problem while creating the candidate"
+}
+
+```
