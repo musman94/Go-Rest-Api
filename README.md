@@ -15,8 +15,7 @@ You can read more about each of the endpoints by clicking on their names.
 [denyCandidate](examples/candidate/denyCandidate.md)                     |/candidate/denyCandidate/{_id}           |PATCH  |
 [acceptCandidate](examples/candidate/acceptCandidate.md)                 |/candidate/acceptCandidate/{_id}         |PATCH  |
 [findAssigneeIDByName](examples/assignee/findAssigneeIDByName.md)        |/assignee/findAssigneeIDByName/{name}    |GET    |
-[findAssigneesCandidates](examples/assingee/findAssigneesCandidates.md)  |/assignee/findAssigneesCandidates/{_id}  |GET    |
-
+[findAssigneesCandidates](examples/assignee/findAssigneesCandidates.md)  |/assignee/findAssigneesCandidates/{_id}  |GET    |
 ## Testing
 For testing you can use a tool like POSTMAN and call each of the endpoints with the required parameters.  
 
