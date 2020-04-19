@@ -21,7 +21,7 @@ Provide the meeting time in the body.
 **Example** 
 
 ```
- /assignee/arrangeMeeting/5e9b5ec12608343d5cbf8c77"`
+ /candidate/arrangeMeeting/5e9b5ec12608343d5cbf8c77"`
 
  ```json
 {
@@ -57,4 +57,34 @@ Provide the meeting time in the body.
 {
     "error": "Invalid Candidate ID"
 }
+```
+
+### Or
+
+**Condition** : If the candidate has already has had 4 meetings.
+
+**Code** : `400 BAD REQUEST`
+
+**Content example**
+
+```json
+{
+    "error": "More than 4 meetings with the candidate are not allowed"
+}
+
+```
+
+### Or
+
+**Condition** : If there was a problem on the database side
+
+**Code** : `500 BAD REQUEST`
+
+**Content example**
+
+```json
+{
+    "error": ""There was an internal problem while arranging a meeting with the candidate""
+}
+
 ```
