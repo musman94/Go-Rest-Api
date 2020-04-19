@@ -13,14 +13,6 @@ import (
 
 var Assignees *mongo.Collection
 
-/*
-func CreateAssignee(assignee Assignee) (Assignee, error) {
-	_, err := Assignees.InsertOne(context.TODO(), assignee)
-
-	return assignee, err
-}
-*/
-
 //ReadAssigneeByID dao layer function
 //Fetches and returns the assignee from the database
 func ReadAssigneeByID(_id string) (Assignee, error) {
@@ -44,17 +36,6 @@ func ReadAssigneeByName(name string) (Assignee, error) {
 
 	return assignee, err
 }
-
-/*
-func DeleteAssignee(_id string) error {
-	id, _ := primitive.ObjectIDFromHex(_id)
-	filter := bson.M{"_id": id}
-
-	_, err := Assignees.DeleteOne(context.TODO(), filter)
-
-	return err
-}
-*/
 
 //Connects to the database and gets the Assignees collection
 func init() {
