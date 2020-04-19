@@ -11,16 +11,6 @@ import (
 	"github.com/musman94/Otsimo-Task/repository"
 )
 
-/*
-func CreateAssignee(assignee Assignee) (Assignee, error) {
-	assignee.ID = primitive.NewObjectID().String()
-
-	result, err := repository.CreateAssignee(assignee)
-
-	return result, err
-}
-*/
-
 //FindAssigneeByID service layer function
 //Fetches the assignee using its ID by calling the repository layer function
 func FindAssigneeByID(_id string) (Assignee, error) {
