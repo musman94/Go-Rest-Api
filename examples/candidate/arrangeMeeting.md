@@ -84,7 +84,7 @@ Provide the meeting time in the body.
 
 ```json
 {
-    "error": ""There was an internal problem while arranging a meeting with the candidate""
+    "error": "There was an internal problem while arranging a meeting with the candidate""
 }
 
 ```
