@@ -13,7 +13,7 @@ Provide the name of the assignee in the url.
 **Example** 
 
 ```
- /assignee/findAssigneesCandidates/5e9c4a78323cc69c4f34da78`
+/assignee/findAssigneesCandidates/5e9c4a78323cc69c4f34da78`
 ```
 
 ## Success Response
@@ -26,7 +26,36 @@ Provide the name of the assignee in the url.
 
 ```json
 {
-    "Assignee's ID": "5e9b2e37a358a83e95401984"
+    "Candidates": [
+        {
+            "_id": "5b75881051d9590001def62a",
+            "first_name": "Kadir",
+            "last_name": "kurt",
+            "email": "kadirkurt@student.com",
+            "department": "Design",
+            "university": "METU",
+            "experience": false,
+            "status": "In Progress",
+            "meeting_count": 3,
+            "next_meeting": "2020-05-01T12:40:00Z",
+            "assignee": "5c191acea7948900011168d4",
+            "application_date": ""
+        },
+        {
+            "_id": "5b75865c51d9590001def626",
+            "first_name": "Ayşe",
+            "last_name": "Kaya",
+            "email": "ayşekaya@yaho.com",
+            "department": "Design",
+            "university": "Ankara",
+            "experience": false,
+            "status": "Accepted",
+            "meeting_count": 4,
+            "next_meeting": null,
+            "assignee": "5c191acea7948900011168d4",
+            "application_date": ""
+        }
+    ]
 }
 
 ```
@@ -41,6 +70,6 @@ Provide the name of the assignee in the url.
 
 ```json
 {
-    "error": "Assignee with the given name doesnot exist"
+    "error": "Invalid assignee ID, assignee couldn't be found""
 }
 ```
