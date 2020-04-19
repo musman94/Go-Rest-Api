@@ -43,5 +43,5 @@ func FindAssigneesCandidates(w http.ResponseWriter, r *http.Request) {
 	}
 
 	RespondWithJson(w, http.StatusOK, map[string][]Candidate{"Candidates": result})
-}
+}   
 
