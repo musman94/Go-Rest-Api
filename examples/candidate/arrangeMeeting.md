@@ -21,7 +21,7 @@ Provide the meeting time in the body.
 **Example** 
 
 ```
-/candidate/arrangeMeeting/5e9b5ec12608343d5cbf8c77"`
+ /candidate/arrangeMeeting/5e9b5ec12608343d5cbf8c77"`
 
  ```json
 {
