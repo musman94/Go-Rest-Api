@@ -13,7 +13,7 @@ Provide the id of the candidate in the url.
 **Example** 
 
 ```
- /candidate/readCandidate/5e9b564ab0d66741ab30fed5"`
+/candidate/readCandidate/5e9b564ab0d66741ab30fed5"`
 ```
 
 ## Success Response
