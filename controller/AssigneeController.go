@@ -45,24 +45,3 @@ func FindAssigneesCandidates(w http.ResponseWriter, r *http.Request) {
 	RespondWithJson(w, http.StatusOK, map[string][]Candidate{"Candidates": result})
 }
 
-/*
-func CreateAssignee(w http.ResponseWriter, r *http.Request) {
-	var assignee Assignee
-
-	if json.NewDecoder(r.Body).Decode(&assignee) != nil {
-		RespondWithError(w, http.StatusInternalServerError, "Invalid request payload")
-		return
-	}
-
-	result, err := service.CreateAssignee(assignee)
-
-	if err != nil {
-		RespondWithError(w, http.StatusInternalServerError, err.Error())
-		return
-	}
-
-	RespondWithJson(w, http.StatusCreated, result)
-
-}
-
-*/
