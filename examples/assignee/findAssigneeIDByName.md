@@ -14,7 +14,7 @@ Provide the name of the assignee in the url.
 **Example** 
 
 ```
- /assignee/findAssigneeIDByName/ali`
+/assignee/findAssigneeIDByName/ali`
 ```
 
 ## Success Response
