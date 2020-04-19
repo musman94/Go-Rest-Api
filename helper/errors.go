@@ -12,7 +12,7 @@ type HttpError struct {
 	Msg  string
 }
 
-//Set the body if the HttpError
+//Set the body of the HttpError
 func (httpError *HttpError) Error() string {
 	return fmt.Sprintf("%v %v", httpError.Code, httpError.Msg)
 }
