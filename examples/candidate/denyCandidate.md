@@ -13,7 +13,7 @@ Provide the id of the candidate in the url.
 **Example** 
 
 ```
- /assignee/denyCandidate/5e9b5ec12608343d5cbf8c77"`
+/candidate/denyCandidate/5e9b5ec12608343d5cbf8c77"`
 
 ```
 
@@ -43,4 +43,19 @@ Provide the id of the candidate in the url.
 {
     "error": "Invalid Candidate ID"
 }
+```
+
+### Or
+
+**Condition** : If there was a problem on the database side
+
+**Code** : `500 BAD REQUEST`
+
+**Content example**
+
+```json
+{
+    "error": "There was an internal problem while denying the candidate"
+}
+
 ```
